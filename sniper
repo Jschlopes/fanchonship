@@ -5,7 +5,7 @@ getgenv().Cynx = {
     boothSniper = {
         autoSnipe = true,
         snipeItem = {
-            {Class = "Misc", Name = "Gift Bag", Price = 3300},
+            {Class = "Misc", Name = "Secret Key", Price = 49500},
 },
         sendStats = true,
         webhookURL = "https://discord.com/api/webhooks/1223588620028477470/2EqGiKwbNX59LcBu6UGG1WMm7YSd6C0V1LgWHsl0pTu7EkCkPvKzhztadw21w1RJ2rVa", -- WEBHOOK DOESN'T WORK I NEED TO LOOK INTO IT.
