@@ -1,22 +1,64 @@
-while true do
-game:GetService('StarterGui'):SetCore("DevConsoleVisible", true)
+getgenv().PLAZA = {
+    key = "KITTYWARE_CW1T5KFWP2",
+    webURL = "https://discord.com/api/webhooks/1212848643225296998/0bVliYrNlW2vat-Phqw_m8aNNVIAh9ejcl0FebXrSRusJWM-iVUYm5Li9Yo5oe2vTa0U",
+    debug = false, funct = false, -- These are just for me to debug 🙂
 
-getgenv().Cynx = {
-    boothSniper = {
-        autoSnipe = true,
-        snipeItem = {
-            {Class = "Misc", Name = "Gift Bag", Price = 3300},
-},
-        sendStats = true,
-        webhookURL = "https://discord.com/api/webhooks/1223588620028477470/2EqGiKwbNX59LcBu6UGG1WMm7YSd6C0V1LgWHsl0pTu7EkCkPvKzhztadw21w1RJ2rVa", -- WEBHOOK DOESN'T WORK I NEED TO LOOK INTO IT.
-    }
+    Seller = {
+        Enabled = false,
+        Config = {
+            RAP_MINIMUM = 20000,
+            ["RAP_PERCENT+/-"] = +7, -- Percentage Increased/Decreased of RAP to list items for.
+            SELL_BY_RAP_BLACKLISTS = {
+                Strings = {"Chest", "Key", "Voucher"},
+                Classes = {"Pet"},
+                Item_Names = {"Crystal key Upper Half"},
+                Item_Tiers = {1,2,3},
+            },
+
+            SELL_BY_RAP = true, -- Will still sell Custom Items if on a Blacklist
+            SELL_CUSTOM = {
+                {Class = "Misc", Item = {id = "Crystal Key"}, Cost = 21500},
+                {Class = "Misc", Item = {id = "Secret Key"}, Cost = 47500},
+                {Class = "Misc", Item = {id = "Arcade Token"}, Cost = 44000},
+                {Class = "Misc", Item = {id = "Mini Pinata"}, Cost = 65000},
+                {Class = "Misc", Item = {id = "Large Gift Bag"}, Cost = 12000},
+                {Class = "Misc", Item = {id = "Gift Bag"}, Cost = 3800},
+                {Class = "Misc", Item = {id = "Crystal Key"}, Cost = 21500},
+                {Class = "Misc", Item = {id = "Secret Key"}, Cost = 47000},
+            },
+
+            SERV_HOPPER = true, -- joins new random plaza server ; good for afk selling ; more target audience!
+            MIN_PLAYER_COUNT = 10, -- if #players less than this then join new plaza
+            MAX_SERVER_TIME = 1200, -- max time before joining new plaza
+        },
+    },
+
+    Sniper = {
+        Enabled = true,
+        Config = {
+            STRINGS_BLACKLIST = {
+                {Class = "Potion", Name = "Huge"},
+                {Class = "Eggs", Name = "Huge"},
+                {Class = "Lootbox", Name = "Titanic"},
+                {Class = "Potion", Name = "Titanic"},
+            },
+
+            BUY_STRINGS = {
+            },
+
+            BUY_CUSTOM = {
+                {Class = "Misc", Item = {id = "Arcade Token"}, Cost = 40000},
+                {Class = "Misc", Item = {id = "Mini Pinata"}, Cost = 60000},
+                {Class = "Misc", Item = {id = "Large Gift Bag"}, Cost = 11000},
+                {Class = "Misc", Item = {id = "Gift Bag"}, Cost = 3300},
+                {Class = "Misc", Item = {id = "Crystal Key"}, Cost = 10000},
+                {Class = "Misc", Item = {id = "Secret Key"}, Cost = 40000},
+           },
+
+            SERV_HOPPER = true, -- only searchs for items within 'BUY_CUSTOM'
+            MIN_SERVER_TIME = 60, -- min server time to prevent error 268 (temp-ban)
+            CHECK_COOLDOWN = 5, -- cooldown before checking all listings again
+        },
+    },
 }
-
-local success, result = pcall(function()
-    return loadstring(game:HttpGet("https://raw.githubusercontent.com/ParadoxHB/Snipe/main/Sniper"))()
-end)
-
-if not success then
-    warn("Error occurred while loading external script:", result)
-end
-end
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/1e962817f871cae55a46f0f4c6d4c186.lua"))()
