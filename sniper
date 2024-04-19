@@ -4,7 +4,7 @@ getgenv().PLAZA = {
     debug = false, funct = false, -- These are just for me to debug 🙂
 
     Seller = {
-        Enabled = false,
+        Enabled = true,
         Config = {
             RAP_MINIMUM = 20000,
             ["RAP_PERCENT+/-"] = +7, -- Percentage Increased/Decreased of RAP to list items for.
