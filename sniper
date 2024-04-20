@@ -18,7 +18,7 @@ getgenv().PLAZA = {
             SELL_BY_RAP = true, -- Will still sell Custom Items if on a Blacklist
             SELL_CUSTOM = {
                 {Class = "Misc", Item = {id = "Crystal Key"}, Cost = 22000},
-                {Class = "Misc", Item = {id = "Arcade Token"}, Cost = 44200},
+                {Class = "Misc", Item = {id = "Arcade Token"}, Cost = 44700},
                 {Class = "Misc", Item = {id = "Mini Pinata"}, Cost = 66000},
                 {Class = "Misc", Item = {id = "Large Gift Bag"}, Cost = 11900},
                 {Class = "Misc", Item = {id = "Gift Bag"}, Cost = 3800},
