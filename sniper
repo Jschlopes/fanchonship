@@ -20,7 +20,7 @@ getgenv().PLAZA = {
                 {Class = "Misc", Item = {id = "Crystal Key"}, Cost = 22000},
                 {Class = "Misc", Item = {id = "Secret Key"}, Cost = 47500},
                 {Class = "Misc", Item = {id = "Arcade Token"}, Cost = 44200},
-                {Class = "Misc", Item = {id = "Mini Pinata"}, Cost = 65000},
+                {Class = "Misc", Item = {id = "Mini Pinata"}, Cost = 66000},
                 {Class = "Misc", Item = {id = "Large Gift Bag"}, Cost = 11900},
                 {Class = "Misc", Item = {id = "Gift Bag"}, Cost = 3800},
                 {Class = "Misc", Item = {id = "Crystal Key"}, Cost = 21500},
