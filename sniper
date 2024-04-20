@@ -56,7 +56,7 @@ getgenv().PLAZA = {
            },
 
             SERV_HOPPER = true, -- only searchs for items within 'BUY_CUSTOM'
-            MIN_SERVER_TIME = 10, -- min server time to prevent error 268 (temp-ban)
+            MIN_SERVER_TIME = 30, -- min server time to prevent error 268 (temp-ban)
             CHECK_COOLDOWN = 5, -- cooldown before checking all listings again
         },
     },
