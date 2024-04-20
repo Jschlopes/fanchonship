@@ -4,7 +4,7 @@ getgenv().PLAZA = {
     debug = false, funct = false, -- These are just for me to debug 🙂
 
     Seller = {
-        Enabled = true,
+        Enabled = false,
         Config = {
             RAP_MINIMUM = 20000,
             ["RAP_PERCENT+/-"] = -10, -- Percentage Increased/Decreased of RAP to list items for.
@@ -21,7 +21,7 @@ getgenv().PLAZA = {
                 {Class = "Misc", Item = {id = "Secret Key"}, Cost = 47500},
                 {Class = "Misc", Item = {id = "Arcade Token"}, Cost = 44200},
                 {Class = "Misc", Item = {id = "Mini Pinata"}, Cost = 65000},
-                {Class = "Misc", Item = {id = "Large Gift Bag"}, Cost = 12000},
+                {Class = "Misc", Item = {id = "Large Gift Bag"}, Cost = 11900},
                 {Class = "Misc", Item = {id = "Gift Bag"}, Cost = 3800},
                 {Class = "Misc", Item = {id = "Crystal Key"}, Cost = 21500},
                 {Class = "Misc", Item = {id = "Secret Key"}, Cost = 49500},
@@ -34,7 +34,7 @@ getgenv().PLAZA = {
     },
 
     Sniper = {
-        Enabled = false,
+        Enabled = true,
         Config = {
             STRINGS_BLACKLIST = {
                 {Class = "Potion", Name = "Huge"},
@@ -49,7 +49,7 @@ getgenv().PLAZA = {
             BUY_CUSTOM = {
                 {Class = "Misc", Item = {id = "Arcade Token"}, Cost = 40000},
                 {Class = "Misc", Item = {id = "Mini Pinata"}, Cost = 60000},
-                {Class = "Misc", Item = {id = "Large Gift Bag"}, Cost = 11000},
+                {Class = "Misc", Item = {id = "Large Gift Bag"}, Cost = 10500},
                 {Class = "Misc", Item = {id = "Gift Bag"}, Cost = 3300},
                 {Class = "Misc", Item = {id = "Crystal Key"}, Cost = 10000},
                 {Class = "Misc", Item = {id = "Secret Key"}, Cost = 40000},
