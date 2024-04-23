@@ -23,7 +23,7 @@ getgenv().PLAZA = {
             },
 
             SELL_CUSTOM = {
-           {Class = "Misc", Item = {id = "Gift Bag"}, Cost = 3900},    
+           {Class = "Misc", Item = {id = "Gift Bag"}, Cost = 3800},    
 
             },
 
