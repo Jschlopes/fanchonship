@@ -1,52 +1,71 @@
 getgenv().PLAZA = {
-    key = "KITTYWARE_CW1T5KFWP2",
-    webURL = "https://discord.com/api/webhooks/1212848643225296998/0bVliYrNlW2vat-Phqw_m8aNNVIAh9ejcl0FebXrSRusJWM-iVUYm5Li9Yo5oe2vTa0U",
-    debug = false, funct = false, -- These are just for me to debug 🙂
+    Global = {
+        yourKey = "KITTYWARE_CW1T5KFWP2",
+        web_Cfg = {
+            Sniper = {send = true, ping = true, send_fails = false, ping_fails = true, url = "https://discord.com/api/webhooks/1232160855190147173/WoiurQxfQEDQR7EXLmuglXr1hmkEvbhsqSgJNDdPieRLWaJ6u0ulIis5HNx1mZGeNeV2"},
+            Seller = {send = true, ping = true, url = "https://discord.com/api/webhooks/1232160959326453770/4qR9sH_Ge2pIstUO_FkbenZUdkBjpcCXefcWbCbgOEAuGzJPcitqMXHAg9j85Xd5XfJD"},
+        },
+        
+        ADVANCED_HOP = true, --// COMING SOON
+        AVOID_SERV_TIME = 300, --// COMING SOON
+    },
 
     Seller = {
-        Enabled = true,
+        Enabled = false,
         Config = {
-            RAP_MINIMUM = 20000000,
-            ["RAP_PERCENT+/-"] = -1, -- Percentage Increased/Decreased of RAP to list items for.
+            RAP_MINIMUM = 50000,
+            ["RAP_PERCENT+/-"] = -10,
             SELL_BY_RAP_BLACKLISTS = {
-                Strings = {"Chest", "Key", "Voucher"},
-                Classes = {"Pet"},
-                Item_Names = {"Crystal key Upper Half"},
+                Strings = {"Chest", "Half"},
+                Classes = {"Pet", "Fruit"},
+                Item_Names = {"Arcade Token"},
                 Item_Tiers = {1,2,3},
             },
 
-            SELL_BY_RAP = true, -- Will still sell Custom Items if on a Blacklist
             SELL_CUSTOM = {
-                {Class = "Misc", Item = {id = "Gift Bag"}, Cost = 4000},
+           {Class = "Misc", Item = {id = "Gift Bag"}, Cost = 3900},    
 
             },
 
-            SERV_HOPPER = true, -- joins new random plaza server ; good for afk selling ; more target audience!
-            MIN_PLAYER_COUNT = 10, -- if #players less than this then join new plaza
-            MAX_SERVER_TIME = 1500, -- max time before joining new plaza
+            AUTO_REDUCER = true, --// COMING SOON
+            TIME_REDUCER = 900, --// COMING SOON
+            ["-%_REDUCER"] = -5, --// COMING SOON
+
+            SELL_BY_RAP = false,
+            SERV_HOPPER = true,
+            MIN_PLAYER_COUNT = 10,
+            MAX_SERVER_TIME = 300,
         },
     },
 
     Sniper = {
-        Enabled = false,
+        Enabled = true,
         Config = {
             STRINGS_BLACKLIST = {
                 {Class = "Potion", Name = "Huge"},
                 {Class = "Eggs", Name = "Huge"},
+                {Class = "Enchant", Name = "Huge"},
                 {Class = "Lootbox", Name = "Titanic"},
                 {Class = "Potion", Name = "Titanic"},
             },
 
             BUY_STRINGS = {
+                ["Titanic"] = 1000000000,
+                ["Huge"] = 50000000,
+                ["Upper"] = 10000,
+                ["Lower"] = 1500,
             },
 
             BUY_CUSTOM = {
-                {Class = "Misc", Item = {id = "Gift Bag"}, Cost = 3300},
+             {Class = "Misc", Item = {id = "Mini Pinata"}, Cost = 60000},
+             {Class = "Misc", Item = {id = "Crystal Key"}, Cost = 10000},
+             {Class = "Misc", Item = {id = "Secret Key"}, Cost = 40000},
            },
 
-            SERV_HOPPER = true, -- only searchs for items within 'BUY_CUSTOM'
-            MIN_SERVER_TIME = 0, -- min server time to prevent error 268 (temp-ban)
-            CHECK_COOLDOWN = 1, -- cooldown before checking all listings again
+            SERV_HOPPER = true,
+            HOP_FAIL_SAFE = 5,
+            MIN_SERVER_TIME = 1200,
+            CHECK_COOLDOWN = 1,
         },
     },
 }
