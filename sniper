@@ -11,7 +11,7 @@ getgenv().PLAZA = {
     },
 
     Seller = {
-        Enabled = false,
+        Enabled = true,
         Config = {
             RAP_MINIMUM = 50000,
             ["RAP_PERCENT+/-"] = -10,
