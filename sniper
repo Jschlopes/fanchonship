@@ -34,7 +34,7 @@ getgenv().PLAZA = {
             SELL_BY_RAP = false,
             SERV_HOPPER = true,
             MIN_PLAYER_COUNT = 10,
-            MAX_SERVER_TIME = 300,
+            MAX_SERVER_TIME = 1200,
         },
     },
 
